@@ -1,6 +1,11 @@
 import './LoginForm.css'
 
 function LoginForm(){
+
+    const handleLogin = () => {
+        alert("Hello, World!!")
+    }
+
     return(
         <>
         <div className='form-container'>
@@ -38,7 +43,7 @@ function LoginForm(){
                         </div>
                         <button
                         type="submit"
-                        className="submit-btn">
+                        className="submit-btn" onClick={()=> handleLogin()}>
                             Log In
                         </button>
                 </form>
