@@ -22,6 +22,27 @@ function Checkout() {
             <div className='container d-flex justify-content-evenly align-items-center flex-column'>
                 <form style={{ width: '100%' }}>
                     <h5 className='text-start'>Billing Address</h5>
+                    <div className='d-flex justify-content-start align-items-start'>
+                        <div className='p-1'>
+                            <p className='text-start'>First Name</p>
+                            <div className="input-group mb-3" >
+                                <input type="text" className="form-control"
+                                    placeholder="First name" aria-label="first-name" aria-describedby="basic-addon1"
+                                    style={{ backgroundColor: '#F5AF0B', color: '#181818' }}
+                                />
+                            </div>
+                        </div>
+                        <div className='p-1'>
+                            <p className='text-start'>Last Name</p>
+                            <div className="input-group mb-3" >
+                                <input type="text" className="form-control"
+                                    placeholder="Last Name" aria-label="last-name" aria-describedby="basic-addon1"
+                                    style={{ backgroundColor: '#F5AF0B', color: '#181818' }}
+                                />
+                            </div>
+                        </div>
+
+                    </div>
                     <p className='text-start'>Username</p>
                     <div className="input-group mb-3" >
                         <div className="input-group-prepend">
