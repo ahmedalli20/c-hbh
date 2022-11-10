@@ -2,7 +2,7 @@ import React from 'react'
 
 function CheckoutForm() {
     return (
-        <form style={{ width: '100%' }}>
+        <form>
             <h5 className='text-start'>Billing Address</h5>
             <div className='d-flex justify-content-start align-items-start flex-wrap'>
                 <div className='p-1'>

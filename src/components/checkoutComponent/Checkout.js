@@ -15,8 +15,8 @@ function Checkout() {
             </h5>
 
             {/* <h6 className='text-start'>Billing Address</h6> */}
-            <div className='container d-flex justify-content-evenly align-items-center flex-column'>
-                {/* <CheckoutForm /> */}
+            <div className='container d-flex justify-content-evenly align-items-center flex-row flex-wrap'>
+                <CheckoutForm />
                 <CheckoutProducts />
             </div>
         </div>
