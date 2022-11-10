@@ -40,3 +40,7 @@
 .at-sign{
   border-radius: 0.375rem 0px 0px 0.375rem !important
 }
+
+.number-input{
+  width: 500px !important;
+}
