@@ -1,12 +1,12 @@
 import '../assets/App.css';
 import LoginForm from './LoginForm';
-import OrderDetails from './orderComponent/OrderDetails';
+import Checkout from './checkoutComponent/Checkout';
 
 function App() {
   return (
     <div className="App">
      {/* <LoginForm /> */}
-     <OrderDetails />
+     <Checkout />
     </div>
   );
 }
