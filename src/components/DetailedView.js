@@ -1,15 +1,17 @@
 import React from "react";
 
-function DetailedView({name, category, price, description}) {
+function DetailedView({name, category_name, price, description, image, quantity }) {
     return (
         <div>
-            <img src=""/>
-            <P></P>
-            <P></P>
-            <p></p>
+            <img src={image}/>
+            <p>{name}</p>
+            <p>{category_name}</p>
+            <p>{price}</p>
+            <p>{description}</p>
+            <p>{quantity}</p>
             <button></button>
-        </div>
 
+        </div>
     )
 }
 
