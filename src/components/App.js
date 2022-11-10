@@ -1,12 +1,10 @@
 import '../assets/App.css';
-import LoginForm from './LoginForm';
-import Checkout from './checkoutComponent/Checkout';
-import SignupForm from './SignupForm';
+import Navbar from './NavBar';
 
 function App() {
   return (
     <div className="App">
-     <SignupForm />
+     <Navbar />
     </div>
   );
 }
