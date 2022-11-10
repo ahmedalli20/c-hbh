@@ -4,13 +4,15 @@ import LandingPage from './Landing_page';
 import LoginForm from './LoginForm';
 import Checkout from './checkoutComponent/Checkout';
 import SignupForm from './SignupForm';
+import DetailedView from './DetailedView';
 
 function App() {
   return (
     <div className="App">
      {/* <LoginForm /> */}
      {/* <LandingPage/> */}
-     <Home/>
+     {/* <Home/> */}
+     <DetailedView />
      {/* <SignupForm /> */}
     </div>
   );
