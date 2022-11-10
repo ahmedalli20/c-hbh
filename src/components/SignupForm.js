@@ -43,7 +43,7 @@ function SignupForm(){
                 <form className="forms" onSubmit={handleSignin}>
                         <div className="col-md-12 mb-3">
                             <label
-                            for="inputUsername"
+                            htmlFor="inputUsername"
                             className="form-label text-white">
                                 Username
                             </label>
@@ -57,7 +57,7 @@ function SignupForm(){
                         </div>
                         <div className="col-md-12 mb-3">
                             <label
-                            for="inputEmail"
+                            htmlFor="inputEmail"
                             className="form-label text-white">
                                 Email
                             </label>
@@ -71,7 +71,7 @@ function SignupForm(){
                         </div>
                         <div className="col-md-12 mb-3">
                             <label
-                            for="inputPassword"
+                            htmlFor="inputPassword"
                             className="form-label text-white">
                                 Password
                             </label>
@@ -86,14 +86,14 @@ function SignupForm(){
                         </div>
                         <div className="col-md-12 mb-3">
                             <label
-                            for="inputRepeatPassword"
+                            htmlFor="inputRepeatPassword"
                             className="form-label text-white">
                                 Repeat Password
                             </label>
                             <input
                             type="password"
                             className="form-control"
-                            id="inputPassword"
+                            id="inputPassword2"
                             width="50px"
                             // onChange={(event) => event.target.value}
                             // value={event.target.value}
