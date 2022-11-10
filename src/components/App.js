@@ -1,5 +1,6 @@
 import '../assets/App.css';
 import LoginForm from './LoginForm';
+import Checkout from './checkoutComponent/Checkout';
 
 function App() {
   return (
