@@ -14,11 +14,7 @@ function CheckoutProducts() {
   // to be replaced with real data
   return (
     <div className='container p-3 m-3' style={styles}>
-      <h6>Products</h6>
-      <Product />
-      <Product />
-      <Product />
-      <Product />
+      <h6>Cart</h6>
       <Product />
       <Product />
       <Product />
