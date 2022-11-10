@@ -3,6 +3,7 @@ import Home from './Home';
 import LandingPage from './Landing_page';
 import LoginForm from './LoginForm';
 import Checkout from './checkoutComponent/Checkout';
+import SignupForm from './SignupForm';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
      {/* <LoginForm /> */}
      {/* <LandingPage/> */}
      <Home/>
+     <SignupForm />
     </div>
   );
 }
