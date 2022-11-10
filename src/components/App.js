@@ -5,8 +5,7 @@ import Checkout from './checkoutComponent/Checkout';
 function App() {
   return (
     <div className="App">
-     {/* <LoginForm /> */}
-     <Checkout />
+     <LoginForm />
     </div>
   );
 }
