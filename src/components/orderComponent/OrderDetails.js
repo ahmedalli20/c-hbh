@@ -30,6 +30,8 @@ function OrderDetails() {
                 <SingleOrder image={image} beer={beer} price={price} pieces={pieces}/>
 
                 <Total total={total} />
+
+                <button className='m-3' style={{width: '300px', height: '50px', border: 0, borderRadius: '5px',color: '#f2f2f2', backgroundColor: 'maroon'}}>Checkout</button>
             </div>
         </div>
     )
