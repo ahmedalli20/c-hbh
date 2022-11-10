@@ -105,7 +105,7 @@ function SignupForm(){
                             Sign Up
                         </button>
                 </form>
-                <p className="mt-2 text-white">Already have an account <span><a href="/">Sign Up</a></span></p>
+                <p className="mt-2 text-white">Already have an account <span><a href="/">Log In</a></span></p>
             </div>
         </div>
         </>
