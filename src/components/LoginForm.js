@@ -47,7 +47,7 @@ function LoginForm(){
                             Log In
                         </button>
                 </form>
-                    <p className="mt-2 text-white">Don't have an account? <span><a href="/">Sign Up</a></span> Here</p>
+                    <p className="mt-2 text-white">Don't have an account? <span><a href="/">Log In</a></span> Here</p>
             </div>
         </div>
         </>
