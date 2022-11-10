@@ -16,7 +16,20 @@ function SignupForm(){
     function handleSignin(event){
         event.preventDefault();
         console.log(formData)
-        alert("Submitted")
+        // alert("Submitted")
+        fetch("http://localhost:9296/customers",{
+            headers: {"Content-Type": "application/json"},
+            method: "POST",
+            body: JSON.stringify(formData)
+        })
+        .then(res => res.json())
+        .then(data => {
+            setFormData({
+                user_name: "",
+                email: "",
+                password_digest: ""
+            })
+        })
     }
     return(
         <>
