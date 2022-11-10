@@ -11,7 +11,7 @@ function App() {
      {/* <LoginForm /> */}
      {/* <LandingPage/> */}
      <Home/>
-     <SignupForm />
+     {/* <SignupForm /> */}
     </div>
   );
 }

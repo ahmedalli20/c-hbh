@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from "react";
+import AllCategories from "./AllCategories";
+import Categories from "./Categories";
 import SomeAlcohol from "./SomeAlcohol";
 // import Sidebar from "./Sidebar";
 
@@ -17,7 +19,9 @@ function Home() {
     return(
         <div>
             {/* <Sidebar/> */}
+            {/* <Categories data={data}/> */}
             <SomeAlcohol data={data}/>       
+            {/* <AllCategories/> */}
         </div>
 
     )
