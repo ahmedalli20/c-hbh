@@ -1,9 +1,15 @@
 import React from "react";
 import BeerImage from "../assets/images/budweiser_small.png"
+import Footer from "./navigation/Footer";
+import Navbar from "./navigation/NavBar";
+import NavbarLinks from "./navigation/NavbarLinks";
 
 function DetailedView({ name, category_name, price, description, image, quantity }) {
     return (
-        <div className="detail">
+        <>
+        <Navbar/>
+        <NavbarLinks />
+        <div className="container detail">
             <h4>Product Details</h4>
             <div className="d-flex justify-content-around align-items-center
 " >
@@ -23,6 +29,8 @@ function DetailedView({ name, category_name, price, description, image, quantity
             </div>
 
         </div>
+        <Footer/>
+        </>
     )
 }
 
