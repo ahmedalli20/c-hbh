@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import { Link } from 'react-router-dom'
 
 function ProductCard({props, setCart, cart, order, setOrder}) {
   const postCard = {
@@ -21,6 +22,8 @@ function ProductCard({props, setCart, cart, order, setOrder}) {
     padding: '7px',
     borderRadius: '3px',
   }
+  
+  
   return (
     <>
       <div style={postCard} className='d-flex justify-content-between align-items-center flex-column m-2'>
@@ -28,7 +31,7 @@ function ProductCard({props, setCart, cart, order, setOrder}) {
         <div className='p-4'>
           <img src={props.image_url} alt='beer' height={150} />
         </div>
-        <div className='mx-5' style={innerCard}>
+        <div className='mx-5' style={innerCard} onClick={() => console.log('clicked!')}>
           <div className='d-flex justify-content-between px-4 pt-3' style={{ color: '#800000' }}>
             <h5>{props.name}</h5>
             <i className='bx bxs-heart bx-sm'></i>
@@ -42,17 +45,30 @@ function ProductCard({props, setCart, cart, order, setOrder}) {
           </div>
 
           {/* button */}
-          <div className='d-flex justify-content-center mb-4' style={{width:'100%'}}>
+          <div className='d-flex justify-content-evenly align-items-center mb-4' style={{width:'100%'}}>
             <button style={checkoutBtn} className='d-flex justify-content-center align-items-center'
             onClick={() => {
               setCart(cart+=1);
-              setOrder([...order, ...props]);
-              console.log(order);
+              setOrder(()=>
+                {
+                  if(order == [])
+                 {
+                  return order.push(props)
+                }
+                 else{
+                  return [...order, props]
+                 }
+                }
+              );
+              
             }}
             >
               <p className='px-1'>Add to Cart</p>
               <i className='bx bxs-cart bx-sm' ></i>
             </button>
+            <div className=''>
+              <Link to={`/details/${props.id}`}>View</Link>
+            </div>
           </div>
         </div>
       </div>

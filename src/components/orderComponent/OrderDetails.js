@@ -1,24 +1,24 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import SingleOrder from './SingleOrder';
 import Total from './Total';
 import NavbarLinks from '../navigation/NavbarLinks';
 import Navbar from '../navigation/NavBar';
 import Footer from '../navigation/Footer';
 
-import image from '../../assets/images/budweiser_small.png';
 
 
-function OrderDetails() {
+function OrderDetails({order, setOrder}) {
     const styles={
         backgroundColor: "white", 
         height: '80vh',
         borderRadius: 10,
     }
     // to be replaced with concrete data
-    const beer = "Budweiser Root Beer";
-    const price = 203.50;
-    const pieces = 4091;
     const total = 5533.3;
+    useEffect(() => {
+      console.log(order)
+    }, [order])
+    
     // to be replaced with concrete data
     return (
         <>
@@ -30,12 +30,15 @@ function OrderDetails() {
             </h5>
 
             <div className='container d-flex justify-content-center align-items-center flex-column'>
-                <SingleOrder image={image} beer={beer} price={price} pieces={pieces}/>
-                <SingleOrder image={image} beer={beer} price={price} pieces={pieces}/>
-                <SingleOrder image={image} beer={beer} price={price} pieces={pieces}/>
-                <SingleOrder image={image} beer={beer} price={price} pieces={pieces}/>
-                <SingleOrder image={image} beer={beer} price={price} pieces={pieces}/>
-                <SingleOrder image={image} beer={beer} price={price} pieces={pieces}/>
+                {
+                    order ?
+                    order.map(singleOrder=> {
+                        return <SingleOrder singleOrder={singleOrder}/>
+                    })
+                    :
+                    "No orders yet"
+                }
+                
 
                 <Total total={total} />
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function NavbarLinks() {
     const links = {
@@ -10,8 +11,9 @@ function NavbarLinks() {
     return (
         <div className='d-flex justify-content-start align-items-center'>
             <div className='px-4 mt-2'>
-                <a href="#" className='px-4'  style={links}>Home</a>
-                <a href="#" className='px-4'  style={links}>About</a>
+                <Link to="/dashboard">
+                    <h6 className='px-4' style={links}>Home</h6>
+                </Link>
 
             </div>
         </div>

@@ -5,8 +5,8 @@ import Footer from '../navigation/Footer';
 import Navbar from '../navigation/NavBar';
 import ProductCard from './ProductCard';
 
-function Dashboard({order, setOrder}) {
-  const [products, setProducts] = useState([]);
+function Dashboard({order, setOrder, products, setProducts}) {
+  
   const [cart, setCart] = useState(0);
   const dark = {
     height: '40px',
