@@ -12,13 +12,21 @@ function SignupForm(){
     const [formData, setFormData] = useState({
         user_name:"",
         email: "",
-        password_digest: ""
+        password_digest: "",
+        repeatpassword: ""
         })
 
     function handleSignin(event){
         event.preventDefault();
         console.log(formData)
         // alert("Submitted")
+
+        if(formData.password_digest !== formData.repeatpassword){
+            alert("Password doesnt match")
+            return
+        }
+
+
         fetch("http://localhost:9296/customers",{
             headers: {"Content-Type": "application/json"},
             method: "POST",
@@ -95,10 +103,11 @@ function SignupForm(){
                             <input
                             type="password"
                             className="form-control"
+                            name='repeatpassword'
                             id="inputPassword2"
                             width="50px"
-                            // onChange={(event) => event.target.value}
-                            // value={event.target.value}
+                            onChange={(event) => setFormData({...formData, repeatpassword:event.target.value})}
+                            value={formData.repeatpassword}
                             />
                         </div>
                         <button
