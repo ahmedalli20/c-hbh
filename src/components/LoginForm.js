@@ -2,8 +2,16 @@ import '../assets/LoginForm.css'
 
 function LoginForm(){
 
-    const handleLogin = () => {
-        alert("Hello, World!!")
+    // const handleLogin = () => {
+    //     alert("Hello, World!!")
+    // }
+
+    function handleLogin(event){
+        event.preventDefault();
+        fetch("http://localhost:9296/customers")
+        .then(res => res.json())
+        .then(data => console.log(data.map(customer => console.log(customer.user_name))))
+        console.log(event.target.username.value)
     }
 
     return(
@@ -15,17 +23,19 @@ function LoginForm(){
             <div className='form-details'>
                 <h2 className='text-center text-white'>Login</h2>
                 <p className='text-center text-white'>Welcome Back!</p>
-                <form className="forms">
+                <form className="forms" onSubmit={handleLogin}>
                         <div className="col-md-12 mb-3">
                             <label
                             for="inputUsername"
+                            name="username"
                             className="form-label text-white">
                                 Username
                             </label>
                             <input
                             type="text"
                             className="form-control col-md-6"
-                            id="inputEmail"
+                            name="username"
+                            id="inputUsername"
                             />
                         </div>
                         <div className="col-md-12 mb-3">
@@ -43,7 +53,7 @@ function LoginForm(){
                         </div>
                         <button
                         type="submit"
-                        className="submit-btn" onClick={()=> handleLogin()}>
+                        className="submit-btn">
                             Log In
                         </button>
                 </form>
