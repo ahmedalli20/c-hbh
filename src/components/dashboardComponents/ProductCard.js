@@ -45,7 +45,7 @@ function ProductCard() {
           {/* button */}
           <div className='d-flex justify-content-center' style={{width:'100%'}}>
             <button style={checkoutBtn} className='d-flex justify-content-center align-items-center'>
-              <p className='px-1'>Checkout</p>
+              <p className='px-1'>Add to Cart</p>
               <i className='bx bxs-cart bx-sm' ></i>
             </button>
           </div>
