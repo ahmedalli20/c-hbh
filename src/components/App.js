@@ -4,11 +4,13 @@ import Navbar from './navigation/NavBar';
 import Checkout from './checkoutComponent/Checkout';
 import OrderDetails from './orderComponent/OrderDetails'
 import Dashboard from './dashboardComponents/Dashboard';
+import DetailedView from './DetailedView'
 
 function App() {
   return (
     <div className="App">
-      <Dashboard />
+      {/* <Dashboard /> */}
+      <DetailedView/>
     </div>
   );
 }
