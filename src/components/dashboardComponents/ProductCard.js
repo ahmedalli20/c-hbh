@@ -32,7 +32,7 @@ function ProductCard() {
         <div className='mx-5' style={innerCard}>
           <div className='d-flex justify-content-between px-4 pt-3' style={{ color: '#800000' }}>
             <h5>Soweto Ruins Beer</h5>
-            <i class='bx bxs-heart bx-sm'></i>
+            <i className='bx bxs-heart bx-sm'></i>
           </div>
           <div className='d-flex justify-content-between px-4 pt-2' style={{ color: '#800000' }}>
             <h6>786pcs</h6>
@@ -46,7 +46,7 @@ function ProductCard() {
           <div className='d-flex justify-content-center' style={{width:'100%'}}>
             <button style={checkoutBtn} className='d-flex justify-content-center align-items-center'>
               <span className='px-1'>Checkout</span>
-              <i class='bx bxs-cart bx-sm' ></i>
+              <i className='bx bxs-cart bx-sm' ></i>
             </button>
           </div>
         </div>
