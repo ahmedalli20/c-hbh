@@ -1,4 +1,5 @@
 import React from 'react';
+import Categories from '../categoryComponents/Categories';
 import Banner from '../navigation/Banner';
 import Footer from '../navigation/Footer';
 import Navbar from '../navigation/NavBar';
@@ -19,6 +20,17 @@ function Dashboard() {
 
       <div style={dark}></div>
       <div style={product} className='d-flex justify-content-center flex-wrap'>
+        <Categories />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
         <ProductCard />
         <ProductCard />
         <ProductCard />

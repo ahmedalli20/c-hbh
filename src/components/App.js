@@ -4,11 +4,12 @@ import Navbar from './navigation/NavBar';
 import Checkout from './checkoutComponent/Checkout';
 import OrderDetails from './orderComponent/OrderDetails'
 import Dashboard from './dashboardComponents/Dashboard';
+import LoginForm from './LoginForm'
 
 function App() {
   return (
     <div className="App">
-      <Dashboard />
+      <LoginForm />
     </div>
   );
 }
