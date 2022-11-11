@@ -47,7 +47,7 @@
 }
 
 .detail {
-  background-color: rgba(243, 243, 243, 1);
+  background-color: #f2f2f2;
   margin: 8%;
   padding-top: 2%;
   padding-left: 1%;
@@ -55,6 +55,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 5px;
  }
 
 
@@ -67,7 +68,7 @@
   margin-right: 2%;
   text-align: left;
   padding: 1.5%;
-  width: 100%;
+  width: 50%;
 }
 
 p {
@@ -128,4 +129,7 @@ span {
   width: 50%;
   height: auto;
   
+}
+.beer-container{
+  width:50%;
 }
