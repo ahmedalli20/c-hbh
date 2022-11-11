@@ -18,7 +18,7 @@ function LoginForm(){
                 <form className="forms">
                         <div className="col-md-12 mb-3">
                             <label
-                            for="inputUsername"
+                            htmlFor="inputUsername"
                             className="form-label text-white">
                                 Username
                             </label>
@@ -30,7 +30,7 @@ function LoginForm(){
                         </div>
                         <div className="col-md-12 mb-3">
                             <label
-                            for="inputPassword"
+                            htmlFor="inputPassword"
                             className="form-label text-white">
                                 Password
                             </label>

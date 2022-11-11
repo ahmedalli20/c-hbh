@@ -1,35 +1,27 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function Sidebar() {
+function Navbar() {
     return(
         <nav>
-
           <NavLink
-          to={"/vodka"}
+          to={"/"}
           activeStyle={{color: "cultured"}}
           >
-            Vodka
+            Home
           </NavLink>
 
           <NavLink
-          to={"/wines"}
+          to={"/categories"}
           activeStyle={{color: "cultured"}}
           >
-            Wines
+            Categories
           </NavLink>
 
-          <NavLink
-          to={"/beers"}
-          activeStyle={{color: "cultured"}}
-          >
-            Beers
-          </NavLink>
-
-
+          <img src=""/>
        </nav>
 
     )
 }
 
-export default Sidebar;
+export default Navbar;
