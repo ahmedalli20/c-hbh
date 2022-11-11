@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import './SignupForm.css';
+import {Link, useNavigate} from 'react-router-dom'
 
 function SignupForm(){
     // const handleSignin = (event) => {
     //     event.preventDefault();
     //     alert("Submitted!")
     // }
+    const navigate = useNavigate()
 
     const [formData, setFormData] = useState({
         user_name:"",
@@ -29,7 +31,7 @@ function SignupForm(){
                 email: "",
                 password_digest: ""
             })
-        })
+        }).then(()=> navigate("/login"))
     }
     return(
         <>
@@ -105,7 +107,7 @@ function SignupForm(){
                             Sign Up
                         </button>
                 </form>
-                <p className="mt-2 text-white">Already have an account <span><a href="/">Sign Up</a></span></p>
+                <p className="mt-2 text-white">Already have an account <span><Link to="/login">Log In</Link></span></p>
             </div>
         </div>
         </>
