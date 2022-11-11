@@ -10,7 +10,7 @@ function SingleOrder({ singleOrder }) {
                 <h6>Ksh. {singleOrder.price}</h6>
                 <h6>{singleOrder.quantity} pcs</h6>
                 <div>
-                    <button className='m-1' style={{ backgroundColor: "maroon", width: '50px', border: 'none', color: "#f2f2f2", borderRadius: '5px' }}>-</button>
+                    <button className='m-1' style={{ backgroundColor: "maroon", width: '50px', border: 'none', color: "#f2f2f2", borderRadius: '5px' }} >-</button>
                     <button className='m-1' style={{ backgroundColor: "maroon", width: '50px', border: 'none', color: "#f2f2f2", borderRadius: '5px' }}>+</button>
                 </div>
             </div>

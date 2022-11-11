@@ -21,6 +21,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard order={order} setOrder={setOrder} products={products} setProducts={setProducts} />} />
           <Route path="/details/:id" element={<DetailedView products={products} />} />
           <Route path="/orderdetails" element={<OrderDetails order={order} setOrder={setOrder} />} />
+          <Route path="/checkout" element={<Checkout/>} />
 
         </Routes>
       </>

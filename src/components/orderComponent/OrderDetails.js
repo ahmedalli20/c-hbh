@@ -4,6 +4,7 @@ import Total from './Total';
 import NavbarLinks from '../navigation/NavbarLinks';
 import Navbar from '../navigation/NavBar';
 import Footer from '../navigation/Footer';
+import { Link } from 'react-router-dom';
 
 
 
@@ -41,8 +42,9 @@ function OrderDetails({order, setOrder}) {
                 
 
                 <Total total={total} />
-
+                <Link to='/checkout'>
                 <button className='m-3' style={{width: '300px', height: '50px', border: 0, borderRadius: '5px',color: '#f2f2f2', backgroundColor: 'maroon'}}>Checkout</button>
+                </Link>
             </div>
         </div>
         <Footer />
