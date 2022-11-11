@@ -10,15 +10,15 @@ function LoginForm() {
 
     function handleLogin(event) {
         event.preventDefault();
-        fetch("http://localhost:9296/customers")
+        fetch("http://localhost:9297/customers")
             .then(res => res.json())
-            .then(data => { 
-                const user = data.find(customer => customer.user_name === event.target.username.value && customer.password_digest === event.target.password.value) 
+            .then(data => {
+                const user = data.find(customer => customer.user_name === event.target.username.value && customer.password_digest === event.target.password.value)
                 console.log(user)
-                if(user) {
+                if (user) {
                     navigate("/dashboard")
                 }
-                else{
+                else {
                     alert("Wrong password or username")
                 }
 
@@ -60,7 +60,7 @@ function LoginForm() {
                                 type="password"
                                 className="form-control"
                                 id="inputPassword"
-                                name= "password"
+                                name="password"
                                 width="50px"
                             />
                         </div>
