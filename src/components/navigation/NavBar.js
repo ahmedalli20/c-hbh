@@ -9,7 +9,7 @@ function Navbar() {
 
   }
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-dark d-flex justify-content-between align-items-center px-5">
+    <nav className="navbar navbar-expand-lg navbar-light bg-dark d-flex justify-content-between align-items-center px-5 flex-wrap">
       <div className="tips-logo">
         <h3 style={{ color: "#f2f2f2" }}>ti<span style={{ color: "#F5AF0B" }}>ps</span></h3>
       </div>
