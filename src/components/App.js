@@ -9,8 +9,8 @@ import DetailedView from './DetailedView'
 function App() {
   return (
     <div className="App">
-      {/* <Dashboard /> */}
-      <DetailedView/>
+      <Dashboard />
+      {/* <DetailedView/> */}
     </div>
   );
 }
