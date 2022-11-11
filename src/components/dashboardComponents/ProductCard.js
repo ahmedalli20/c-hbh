@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ProductCard({props}) {
+function ProductCard({props, setCart, cart, order, setOrder}) {
   const postCard = {
     borderRadius: '5px',
     height: '400px',
@@ -43,7 +43,13 @@ function ProductCard({props}) {
 
           {/* button */}
           <div className='d-flex justify-content-center mb-4' style={{width:'100%'}}>
-            <button style={checkoutBtn} className='d-flex justify-content-center align-items-center'>
+            <button style={checkoutBtn} className='d-flex justify-content-center align-items-center'
+            onClick={() => {
+              setCart(cart+=1);
+              setOrder([...order, ...props]);
+              console.log(order);
+            }}
+            >
               <p className='px-1'>Add to Cart</p>
               <i className='bx bxs-cart bx-sm' ></i>
             </button>

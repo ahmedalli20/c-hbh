@@ -5,8 +5,9 @@ import Footer from '../navigation/Footer';
 import Navbar from '../navigation/NavBar';
 import ProductCard from './ProductCard';
 
-function Dashboard() {
-  const [products, setProducts] = useState([])
+function Dashboard({order, setOrder}) {
+  const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState(0);
   const dark = {
     height: '40px',
     backgroundColor: '#181818',
@@ -32,7 +33,7 @@ function Dashboard() {
 
   return (
     <>
-      <Navbar />
+      <Navbar cart={cart} />
       <Banner />
 
       <div style={dark}></div>
@@ -40,7 +41,10 @@ function Dashboard() {
         <Categories />
         {
           products.map(product => {
-            return <ProductCard key={product.id} props={product} />
+            return <ProductCard key={product.id} props={product} setCart={setCart} cart={cart}
+            order={order}
+            setOrder={setOrder}
+            />
           })
           
         }

@@ -11,7 +11,7 @@ body {
 .form-img{
     padding-right: 50px;
 }
-img {
+.form-img img {
     height: 350px;
 }
 .submit-btn{

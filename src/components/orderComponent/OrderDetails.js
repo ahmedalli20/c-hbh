@@ -1,8 +1,8 @@
 import React from 'react';
 import SingleOrder from './SingleOrder';
 import Total from './Total';
-import Navbar from '../navigation/NavBar';
 import NavbarLinks from '../navigation/NavbarLinks';
+import Navbar from '../navigation/NavBar';
 import Footer from '../navigation/Footer';
 
 import image from '../../assets/images/budweiser_small.png';

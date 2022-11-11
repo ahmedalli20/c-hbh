@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function Navbar() {
+function Navbar({cart}) {
   const pill = {
     borderRadius: '50%',
-    backgroundColor: "red",
+    backgroundColor: 'red ',
     fontSize: '14px'
 
   }
@@ -18,11 +18,15 @@ function Navbar() {
       </form>
       <div>
         <div className="cart">
+        <NavLink
+          to={"/orderdetails"}
+          >
           <div style={{ color: "#f2f2f2" }}>
             <i className='bx bxs-cart bx-md' ></i>
-            <sup><span className="badge badge-pill badge-danger custon-pill" style={pill}>2</span></sup>
+            <sup><span className="badge badge-pill badge-danger custon-pill" style={pill}>{cart}</span></sup>
             <i className='bx bxs-user-circle bx-md mx-5'></i>
           </div>
+          </NavLink>
         </div>
 
 
