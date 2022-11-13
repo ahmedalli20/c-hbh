@@ -1,6 +1,11 @@
 import React from 'react'
 
 function CheckoutForm() {
+    function handlePay(e){
+        e.preventDefault()
+        alert("Order Complete.Thank you for shopping with us");
+        // e.Reset()
+    }
     return (
         <form>
             <h5 className='text-start'>Billing Address</h5>
@@ -72,7 +77,7 @@ function CheckoutForm() {
                 borderRadius: '5px',
                 color: '#f2f2f2',
                 backgroundColor: 'maroon'
-            }}>
+            }} onClick={handlePay}>
                 Pay
             </button>
 
