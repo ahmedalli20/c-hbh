@@ -26,9 +26,9 @@ function ProductCard({props, setCart, cart, order, setOrder}) {
   
   return (
     <>
-      <div style={postCard} className='d-flex justify-content-between align-items-center flex-column m-2'>
+      <div style={postCard} className='d-flex justify-content-between align-items-center flex-column m-3'>
         {/* <h5>ProductCard</h5> */}
-        <div className='p-4'>
+        <div className='p-4 beer-image d-flex justify-content-center align-items-start'>
           <img src={props.image_url} alt='beer' height={150} />
         </div>
         <div className='mx-5' style={innerCard} onClick={() => console.log('clicked!')}>
@@ -45,13 +45,23 @@ function ProductCard({props, setCart, cart, order, setOrder}) {
           </div>
 
           {/* button */}
-          <div className='d-flex justify-content-evenly align-items-center mb-4' style={{width:'100%'}}>
+          <div className='d-flex justify-content-evenly align-items-center mb-5' style={{width:'100%'}}>
             <button style={checkoutBtn} className='d-flex justify-content-center align-items-center'
             onClick={() => {
-              setCart(cart+=1);
+              setCart(()=>{
+                if(cart === []){
+                  console.log(cart)
+                  return cart.push(props)
+                }
+                else{
+                  console.log(cart)
+                  return [...cart, props]
+                }
+
+              });
               setOrder(()=>
                 {
-                  if(order == [])
+                  if(order === [])
                  {
                   return order.push(props)
                 }

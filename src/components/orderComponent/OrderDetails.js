@@ -1,26 +1,24 @@
-import React, {useEffect} from 'react';
+import React, {useContext, useEffect} from 'react';
 import SingleOrder from './SingleOrder';
 import Total from './Total';
 import NavbarLinks from '../navigation/NavbarLinks';
 import Navbar from '../navigation/NavBar';
 import Footer from '../navigation/Footer';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../dashboardComponents/CartContext';
 
 
-
-function OrderDetails({order, setOrder}) {
+function OrderDetails() {
+    const {cart, setCart} = useContext(CartContext);
     const styles={
         backgroundColor: "white", 
         height: '80vh',
         borderRadius: 10,
     }
     // to be replaced with concrete data
-    const total = 5533.3;
-    useEffect(() => {
-      console.log(order)
-    }, [order])
-    
-    // to be replaced with concrete data
+    let priceList = [];
+    cart.map(item=>  priceList.push(item.price))
+    const total = priceList.reduce((prev, current) => current + prev)
     return (
         <>
         <Navbar />
@@ -32,9 +30,9 @@ function OrderDetails({order, setOrder}) {
 
             <div className='container d-flex justify-content-center align-items-center flex-column'>
                 {
-                    order ?
-                    order.map(singleOrder=> {
-                        return <SingleOrder singleOrder={singleOrder}/>
+                    cart ?
+                    cart.map(singleOrder=> {
+                        return <SingleOrder key={singleOrder.id} singleOrder={singleOrder}/>
                     })
                     :
                     "No orders yet"

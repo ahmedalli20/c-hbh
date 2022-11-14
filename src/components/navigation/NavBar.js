@@ -1,7 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
 import { NavLink } from "react-router-dom";
+import {CartContext} from '../dashboardComponents/CartContext';
 
-function Navbar({cart}) {
+
+function Navbar() {
+  const {cart, setCart} = useContext(CartContext);
+
   const pill = {
     borderRadius: '50%',
     backgroundColor: 'red ',
@@ -23,7 +27,7 @@ function Navbar({cart}) {
           >
           <div style={{ color: "#f2f2f2" }}>
             <i className='bx bxs-cart bx-md' ></i>
-            <sup><span className="badge badge-pill badge-danger custon-pill" style={pill}>{cart}</span></sup>
+            <sup><span className="badge badge-pill badge-danger custon-pill" style={pill}>{cart.length}</span></sup>
             <i className='bx bxs-user-circle bx-md mx-5'></i>
           </div>
           </NavLink>
