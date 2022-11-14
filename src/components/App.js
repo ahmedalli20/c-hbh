@@ -8,6 +8,7 @@ import Dashboard from './dashboardComponents/Dashboard';
 import DetailedView from './DetailedView'
 import { Routes, Route } from "react-router-dom";
 import LoginForm from './LoginForm';
+import SignupForm from './SignupForm'
 
 function App() {
   const [order, setOrder] = useState([]);
@@ -22,6 +23,8 @@ function App() {
           <Route path="/details/:id" element={<DetailedView products={products} />} />
           <Route path="/orderdetails" element={<OrderDetails order={order} setOrder={setOrder} />} />
           <Route path="/checkout" element={<Checkout/>} />
+          <Route path="/signup" element={<SignupForm/>} />
+
 
         </Routes>
       </>
