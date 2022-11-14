@@ -48,10 +48,20 @@ function ProductCard({props, setCart, cart, order, setOrder}) {
           <div className='d-flex justify-content-evenly align-items-center mb-5' style={{width:'100%'}}>
             <button style={checkoutBtn} className='d-flex justify-content-center align-items-center'
             onClick={() => {
-              setCart(cart+=1);
+              setCart(()=>{
+                if(cart === []){
+                  console.log(cart)
+                  return cart.push(props)
+                }
+                else{
+                  console.log(cart)
+                  return [...cart, props]
+                }
+
+              });
               setOrder(()=>
                 {
-                  if(order == [])
+                  if(order === [])
                  {
                   return order.push(props)
                 }

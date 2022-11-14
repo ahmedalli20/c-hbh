@@ -1,11 +1,10 @@
-import React, {useEffect} from 'react';
+import React, {useContext, useEffect} from 'react';
 import SingleOrder from './SingleOrder';
 import Total from './Total';
 import NavbarLinks from '../navigation/NavbarLinks';
 import Navbar from '../navigation/NavBar';
 import Footer from '../navigation/Footer';
 import { Link } from 'react-router-dom';
-
 
 
 function OrderDetails({order, setOrder}) {

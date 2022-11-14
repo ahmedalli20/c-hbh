@@ -14,22 +14,21 @@ import { CartContext } from './dashboardComponents/CartContext';
 function App() {
   const [order, setOrder] = useState([]);
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
 
   return (
     <div className="App">
       <>
-        <Routes>
-          <Route path="/" element={<LoginForm />} />
-          <Route path="/signup" element={<SignupForm/>} />
-          <CartContext.Provider>
-          <Route path="/dashboard" element={<Dashboard order={order} setOrder={setOrder} products={products} setProducts={setProducts} />} />
-          <Route path="/details/:id" element={<DetailedView products={products} />} />
-          <Route path="/orderdetails" element={<OrderDetails order={order} setOrder={setOrder} />} />
-          <Route path="/checkout" element={<Checkout/>} />
-          </CartContext.Provider>
-
-
-        </Routes>
+        <CartContext.Provider value={{ cart, setCart }}>
+          <Routes>
+            <Route path="/" element={<LoginForm />} />
+            <Route path="/signup" element={<SignupForm />} />
+            <Route path="/dashboard" element={<Dashboard order={order} setOrder={setOrder} products={products} setProducts={setProducts} />} />
+            <Route path="/details/:id" element={<DetailedView products={products} />} />
+            <Route path="/orderdetails" element={<OrderDetails order={order} setOrder={setOrder}  />} />
+            <Route path="/checkout" element={<Checkout />} />
+          </Routes>
+        </CartContext.Provider>
       </>
     </div>
   );
