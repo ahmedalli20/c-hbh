@@ -9,6 +9,7 @@ import DetailedView from './DetailedView'
 import { Routes, Route } from "react-router-dom";
 import LoginForm from './LoginForm';
 import SignupForm from './SignupForm'
+import { CartContext } from './dashboardComponents/CartContext';
 
 function App() {
   const [order, setOrder] = useState([]);
@@ -19,11 +20,13 @@ function App() {
       <>
         <Routes>
           <Route path="/" element={<LoginForm />} />
+          <Route path="/signup" element={<SignupForm/>} />
+          <CartContext.Provider>
           <Route path="/dashboard" element={<Dashboard order={order} setOrder={setOrder} products={products} setProducts={setProducts} />} />
           <Route path="/details/:id" element={<DetailedView products={products} />} />
           <Route path="/orderdetails" element={<OrderDetails order={order} setOrder={setOrder} />} />
           <Route path="/checkout" element={<Checkout/>} />
-          <Route path="/signup" element={<SignupForm/>} />
+          </CartContext.Provider>
 
 
         </Routes>

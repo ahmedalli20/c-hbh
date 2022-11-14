@@ -38,7 +38,7 @@ function Dashboard({order, setOrder, products, setProducts}) {
 
       <div style={dark}></div>
       <div style={product} className='d-flex justify-content-center flex-wrap'>
-        <Categories />
+        {/* <Categories /> */}
         {
           products.map(product => {
             return <ProductCard key={product.id} props={product} setCart={setCart} cart={cart}

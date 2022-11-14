@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import './SignupForm.css';
+// import './SignupForm.css';
+import '../assets/LoginForm.css'
 import { Link, useNavigate } from 'react-router-dom'
 
 function SignupForm() {
@@ -43,7 +44,7 @@ function SignupForm() {
     }
     return (
         <>
-            <div className='form-container'>
+            <div className='form-container d-flex justify-content-center align-items-center'>
 
                 <div className='form-details container d-flex justify-content-center align-items-center'>
                     <div className=''>
