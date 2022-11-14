@@ -1,5 +1,16 @@
 # Tips Frontend
 # Tips E-commerce Web Application.
+This is a liquor vending e-commerce application.
+
+
+
+## Tech Stack
+
+**Client:** React, Redux, Bootstrap 5
+
+**Server:** Ruby, Sinatra
+
+**Database:** SQlite3
 
 # Requirements
 - Use Active Record to interact with a database.
@@ -28,6 +39,22 @@ This application serves to be one-stop option for all your alcoholic and non-alc
 - A user can select more than one item to be added to their cart which accumulates as the user goes. 
 - A user is able to view their cart, their order, and decided whther or not they are satisfied with their order.
 - On checkout, a user is allowed to give their preferred payment option and proceed to payment.
+
+## Lessons Learned
+
+- Globalization of state using context
+- Pushing to different navigations using the useNavigate hook.
+- APIs using Sinatra
+
+## 🚀 License
+MIT License
+
+## Authors
+
+- Ahmed Ali
+- Muriithi Gakuru
+- Anne Ogongo
+- Joel Gachau
 
 
 
