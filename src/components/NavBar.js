@@ -12,23 +12,13 @@ function Navbar() {
           </NavLink>
 
           <NavLink
-          to={"/Categories"}
+          to={"/categories"}
           activeStyle={{color: "cultured"}}
           >
             Categories
           </NavLink>
 
-          <NavLink
-          to={"/Add_alcohol"}
-          activeStyle={{color: "cultured"}}
-          >
-            Add Alcohol
-          </NavLink>
-
           <img src=""/>
-
-
-
        </nav>
 
     )

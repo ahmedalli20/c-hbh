@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #956801 !important;
 }
 
 .App-logo {
@@ -44,3 +45,95 @@
 .number-input{
   width: 500px !important;
 }
+
+.detail {
+  background-color: #f2f2f2;
+  margin: 5%;
+  padding-top: 2%;
+  padding-left: 1%;
+  padding-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+ }
+
+
+.details {
+  background-color: rgba(245, 175, 11, 1);
+  border-radius: 2%;
+  float: right;
+  margin-left: 5%;
+  margin-top: 3%;
+  margin-right: 2%;
+  text-align: left;
+  padding: 1.5%;
+  width: 50%;
+}
+
+p {
+  margin: 2%;
+}
+
+.name {
+  font-size: x-large;
+  color: rgba(128, 0, 0, 1);
+  font-weight: 800;
+}
+
+.buttons {
+  background-color: rgba(128, 0, 0, 1);
+  width: 70%;
+  margin-bottom: 2%;
+  border-radius: 50px;
+  color: rgba(243, 243, 243, 1);
+  margin-left: 15%;
+  padding: 2%;
+  font-weight: 600;
+  margin-top: 2%
+}
+
+.description {
+  margin: 1%;
+}
+
+h4{
+  text-align: start;
+}
+
+.quantity {
+  font-weight: 900;
+}
+
+.price {
+  color: rgba(128, 0, 0, 1);
+  font-weight: 800;
+}
+
+h6 {
+  font-weight: 800;
+}
+
+span {
+  color: rgba(128, 0, 0, 1);
+  font-weight: 800;
+  font-size: larger;
+}
+.category {
+  font-weight: 500;
+}
+
+.beer {
+  float: left;
+  margin-top: 5%;
+  width: 50%;
+  height: auto;
+  
+}
+.beer-container{
+  width:50%;
+}
+/* .p-4.beer-image {
+  height: 30px !important;
+  width: 50px;
+} */

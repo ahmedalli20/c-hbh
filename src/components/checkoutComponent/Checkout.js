@@ -1,4 +1,7 @@
 import React from 'react'
+import Footer from '../navigation/Footer';
+import Navbar from '../navigation/NavBar';
+import NavbarLinks from '../navigation/NavbarLinks';
 import CheckoutForm from './CheckoutForm';
 import CheckoutProducts from './CheckoutProducts';
 
@@ -9,7 +12,10 @@ function Checkout() {
         borderRadius: 10,
     }
     return (
-        <div className='container' style={styles}>
+        <>
+        <Navbar />
+        <NavbarLinks />
+        <div className='container py-5 my-1' style={styles}>
             <h5 className='text-start p-3'>
                 Checkout
             </h5>
@@ -20,6 +26,8 @@ function Checkout() {
                 <CheckoutProducts />
             </div>
         </div>
+        <Footer />
+        </>
     )
 }
 
